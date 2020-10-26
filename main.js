@@ -15,98 +15,60 @@ function loadProducts() {
 
 function initSite() {
     loadProducts();
-    // This would also be a good place to initialize other parts of the UI
 }
 
-/** Uses the loaded products data to create a visible product list on the website */
 function addProductsToWebpage() {
-    // Check your console to see that the products are stored in the listOfProducts varible.
     console.log(listOfProducts);
+ var container = document.createElement('div');
+var itemCard = document.createElement('div');
 
-    // Add your code here, remember to brake your code in to smaller function blocks
-    // to reduce complexity and increase readability. Each function should have
-    // an explainetory comment like the one for this function, see row 22.
+    for (let i = 0; i < listOfProducts.length; i++) {
+        const item = listOfProducts[i];
 
-    // TODO: Remove the console.log and these comments when you've read them.
-}
+var purchaseButton = document.createElement('button');
+var itemImage = document.createElement('img');
+var itemName = document.createElement('h1');
+var itemDescription = document.createElement('h5');
+var itemPrice = document.createElement('h5');
 
 
-let productList =[
-    {
-title: "iPhone",
-price: "13000",
-description: "something here",
-imageUrl: "/Project/LGV30.png"
 
-},{
-title: "LgV3",
-price: "7490",
-description: "something here",
-imageUrl: "/Project/LGV30.png"
+purchaseButton.className= "btn btn-large btn-primary purchaseButton fas fa-cart-plus"
+purchaseButton.innerText = " Lägg till i kundvagnen"
+purchaseButton.onclick = function() {
+    console.log("purchase button pressed")
+  };
+container.className = 'container text-center';
+itemCard.className = "container-md"
+itemImage.style.height = "50vh"
+itemImage.style.width = "auto"
 
-},{
-    title: "LgV3",
-    price: "7490",
-    description: "something here",
-    imageUrl: "/Project/LGV30.png"
+itemImage.src = "./assets/" + item.image
+itemName.innerText = item.title
+itemDescription.innerText = item.description
+itemPrice.innerText = item.price +" "+"kr";
 
+
+
+
+itemCard.appendChild(itemName)
+itemCard.appendChild(itemDescription)
+itemCard.appendChild(itemImage)
+itemCard.appendChild(itemPrice)
+itemCard.appendChild(purchaseButton)
+
+
+
+
+        
     }
-    ,{
-        title: "LgV3",
-        price: "7490",
-        description: "something here",
-        imageUrl: "/Project/LGV30.png"
+    document.body.appendChild(container);
 
-        }
+    container.appendChild(itemCard)
 
-]
 
-for (let i = 0; i < productList.length; i++) {
-    const product = productList[i];
 
-    renderItem(product)
 
 }
 
-function renderItem (product){
 
-var div = document.createElement('div');
-var secondDiv = document.createElement('div');
-var thirdDiv = document.createElement('div');
-var buttons = document.createElement('button');
-var phoneImage = document.createElement('img');
-var phoneName = document.createElement('h1');
-var phoneDescription = document.createElement('h5');
-var phonePrice = document.createElement('h5');
-
-
-
-buttons.className= "btn btn-primary fas fa-cart-plus"
-buttons.innerText = " Click to add to cart"
-div.className = 'container text-center';
-secondDiv.className = "container-md"
-thirdDiv.className = "container-sm"
-phoneImage.style.height = "50vh"
-phoneImage.style.width = "auto"
-phoneImage.src = product.imageUrl
-phoneName.innerText = product.title
-phoneDescription.innerText = product.description
-phonePrice.innerText = product.price
-
-
-
-
-secondDiv.appendChild(phoneName)
-secondDiv.appendChild(phoneDescription)
-secondDiv.appendChild(phoneImage)
-secondDiv.appendChild(phonePrice)
-secondDiv.appendChild(buttons)
-
-
-
-
-
-
-document.body.appendChild(div);
-div.appendChild(secondDiv)
-}
