@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TechStore</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="navbar.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a class="navbar-brand" href="navbarlogin.html"><strong>Techstore</strong></a>
+      <ul class="navbar-nav ml-auto">
+        <button
+          class="btn btn-default dropdown-toggle"
+          type="button"
+          id="menu1"
+          data-toggle="dropdown"
+        ></button>
+
+        <div id="login">
+          <a href="navbar.html">
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-check-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm9.854-2.854a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+              </svg>
+              <div class="hoverinfo"><span class="info">1</span>
+                  <p>
+                      Logga ut
+                  </p>
+              </div>
+
+
+
+
+
+
+          </a>
+        </div>
+          <div>
+            <span id="count">0</span>
+          </div>
+          <svg
+            width="3em"
+            height="3em"
+            viewBox="0 0 16 16"
+            class="bi bi-cart"
+            fill="white"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
+            />
+          </svg>
+        </button>
+      </ul>
+    </nav>
+    <div class="divOne">
+      <div>
+        <button onclick="AddToCart()">+</button>
+        <button onclick="RemoveFromCart()">-</button>
+      </div>
+    </div>
+    <script>
+        function AddToCart() {
+          var count = document.getElementById("count");
+          count.innerHTML++;
+          var login = document.getElementById("login");
+          console.log(" X Produkt tillagd i varukorgen")
+
+        }
+      </script>
+      <script>
+        function RemoveFromCart() {
+          var count = document.getElementById("count");
+          count.innerHTML--;
+          console.log(" X Produkt bortagen i varukorgen")
+        }
+      </script>
+  </body>
+</html>
