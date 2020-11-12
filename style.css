@@ -1,0 +1,82 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;  
+  }
+
+a {
+  color: #FFFFFF; 
+  text-decoration: none;
+}
+
+main {
+  width: 100%;
+  text-align: center;
+  margin-top: 15vh;
+  
+}
+
+  
+  input {
+    border: 1px solid #e0e3eb;
+    height: 45px;
+    color: #18214d;
+    font-size: 14px;
+  }
+
+
+.item-card {
+  height: 85vh;
+}
+
+
+.phone-card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.purchaseButton {
+  width: 250px;
+  height: 50px;
+  padding: 10px;
+  margin-bottom: 100px;
+  border-radius: 5px;
+  
+}
+
+.form-access {
+  max-width: 300px;
+  margin: 70px auto;
+}
+
+.form {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 14px -6px;
+  border: 1px solid #f2f4f9;
+  border-radius: 5px;
+  padding: 30px;
+  min-width: 350px;
+}
+@media only screen and (max-width: 480px) {
+
+  .item-card {
+    text-align: center;
+    font-weight: bold;   
+    height: 75vh;
+  }
+  
+
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .item-card {
+    text-align: center;
+    font-weight: bold;   
+    height: 75vh;
+  }
+  
+
+}

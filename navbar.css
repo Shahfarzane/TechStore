@@ -1,0 +1,15 @@
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  
+}
+
+
+
+#counter {
+  color: white;
+  position: fixed;
+  margin-left: -50px;
+  margin-top: 20px;
+}
