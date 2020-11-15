@@ -1,5 +1,41 @@
 [
     {
+        "title": "iPhone 12 Pro Max",
+        "description": "The Pro camera system takes low-light photography to the next level.",
+        "image": "iphone12promax.png",
+        "price": 13795
+    },
+    {
+        "title": "iPhone 12 Pro",
+        "description": "Apples latest iPhone with amazing features,LiDAR Censore and more",
+        "image": "iphone12.png",
+        "price": 12495
+    },
+    {
+        "title": "iPhone 12",
+        "description": "5G speed. A14 Bionic, the fastest chip in a smartphone.",
+        "image": "iphone12blue.png",
+        "price": 9900
+    },
+    {
+        "title": "iPhone 12 Mini",
+        "description": "Ceramic Shield with four times better drop performance.",
+        "image": "iphone12mini.png",
+        "price": 8340
+    },
+    {
+        "title": "Samsung Galaxy S20",
+        "description": "Samsungs Flagship phone with 20megapixel camera.",
+        "image": "galaxys20.png",
+        "price": 10495
+    },
+    {
+        "title": "Samsung Galaxy Note 20",
+        "description": "Samsungs flagship phone with amazing battery life",
+        "image": "galaxynote.jpg",
+        "price": 14495
+    },
+    {
         "title": "iPhone X",
         "description": "Last years phone from Apple with a beautiful all display front.",
         "image": "iPhoneX.png",

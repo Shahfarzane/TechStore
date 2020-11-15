@@ -22,7 +22,7 @@ inputPassword.id = "newPassword"
 inputPassword.type = "password"
 
 signUpButton.innerText = "Register"
-signUpButton.type = "reset"
+signUpButton.type = "button"
 signUpButton.addEventListener("click",register)
 
 
@@ -59,7 +59,7 @@ function register() {
               userStorage.push(newUser)
               localStorage.setItem('loggedInUser',JSON.stringify(newUser))
               localStorage.setItem('usersDB', JSON.stringify(userStorage)); 
-              window.location = "index.html"
+              window.location = "dashboard.html" 
             }
           
         return false;

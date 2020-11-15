@@ -95,10 +95,12 @@ function addItemToLocalStorage(item){
         localStorage.setItem("itemsInCart", "[]");
     }
 
-    var addedToCart = JSON.parse(itemsInLocalStorage)
+    var addedToCart = JSON.parse(localStorage.getItem("itemsInCart"))
     var phone = item;
+    var length=addedToCart.length;
+    phone.num=length;
     addedToCart.push(phone)
     localStorage.setItem("itemsInCart", JSON.stringify(addedToCart));
-    document.getElementById("counter").innerText = addedToCart.length
+    // document.getElementById("counter").innerText = addedToCart.length
 
 }
