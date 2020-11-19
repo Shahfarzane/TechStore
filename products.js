@@ -25,7 +25,7 @@
 ]
  */
 
-let merchList = localStorage.getItem("merch")
+let merchList = localStorage.getItem("itemsInCart")
 merchList = JSON.parse(merchList)
 
 for (let i = 0; i <merchList.length; i++) {
@@ -72,9 +72,9 @@ function renderMerchCart(merch) {
     button.innerHTML = '<i class="far fa-trash-alt">&emsp; Ta bort</i>'
 
     let merchImg = document.createElement("img")
-    merchImg.src =merch.imageUrl
-    merchImg.style.height = "100%"
-    merchImg.style.width = "100%"
+    merchImg.src = "./assets/" + merch.image
+    merchImg.style.height = "50vh"
+    merchImg.style.width = "auto"
 
     let merchTitle = document.createElement("h1")
     merchTitle.style.fontWeight = "1000"
@@ -82,8 +82,7 @@ function renderMerchCart(merch) {
 
     let merchPrice = document.createElement("h4")
     merchPrice.style.fontWeight = "550"
-    merchPrice.innerText = merch.pris
-    
+    merchPrice.innerText = merch.price
     
     inCart.appendChild(merchContainer) 
 
