@@ -28,7 +28,6 @@
 let merchList = localStorage.getItem("merch")
 merchList = JSON.parse(merchList)
 
-
 for (let i = 0; i <merchList.length; i++) {
     const merch = merchList[i]
     renderMerchCart(merch)
@@ -36,7 +35,7 @@ for (let i = 0; i <merchList.length; i++) {
 
 function renderMerchCart(merch) {
 
-    let inCart = document.getElementById("merchProducts")
+    let inCart = document.getElementById("inCart")
 
     let merchContainer = document.createElement("div")
     merchContainer.style.display = "flex"
@@ -50,7 +49,6 @@ function renderMerchCart(merch) {
     let imgContainer = document.createElement("div")
     imgContainer.style.flex = "6 0 0px"
     
-
     let textContainer = document.createElement("div")
     textContainer.style.display = "flex"
     textContainer.style.flexDirection = "column"
@@ -98,9 +96,6 @@ function renderMerchCart(merch) {
     textContainer.appendChild(merchPrice)
     textContainer.appendChild(button)
 }
-function blueCartbtn () {
+function blueCartBtn () {
     alert("Du slutför nu ditt köp");
 }
-
-
-    

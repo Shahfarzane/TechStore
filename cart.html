@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="/kundvagnsida.css">
+    <script defer src="/products.js"></script>
+    <title>TechStore</title>
+</head>
+<body>
+    <header>
+        <div class="headerContainer">
+            <div class="headerText"><h1>TechStore</h1></div>
+            <div class="quantity"><h1>1</h1></div>
+            <img class="cartWhite" src="/assets/cart.png" alt="">
+        </div>
+    </header>
+    <!-- Title Kundvagn -->
+    <div class="blkCart">
+        <img class="blkCartImg" src="/assets/Cart B.png"></a>
+        <h1 class="blkCartTxt">Kundvagn</h1>
+    </div>
+    <!-- Title Kundvagn -->
+    <!-- Produktsidan -->
+    <div id="inCart"></div>
+    <div id="merchProducts"></div>
+    <!-- Produktsidan -->
+    <!-- Slutföra köpet -->
+    <div id="exitContainer">
+        <div>
+            <h2 id="txtTotal">Total pris:</h1>
+            <p id=CartSum></p>
+        </div>
+        <div>
+           <button id="blueCartbtn" onclick="blueCartBtn()">&#10004 Slutför ditt köp</button>
+        </div>
+    </div>
+    <!-- Slutföra köpet -->
+</body>
+</html>
