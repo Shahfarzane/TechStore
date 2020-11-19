@@ -113,11 +113,3 @@ function navBarCreator() {
 
 }
 
-
-function logOut(e) {
-
-  e.preventDefault();
-  localStorage.removeItem('loggedInUser');
-  window.location = "index.html"
-
-}
