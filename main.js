@@ -90,12 +90,12 @@ container.appendChild(itemCard)
 
 function addItemToLocalStorage(item){
 
-    if (!itemsInLocalStorage) {
+    if (!localStorage.getItem("itemsInCart")) {
 
         localStorage.setItem("itemsInCart", "[]");
     }
 
-    var addedToCart = JSON.parse(itemsInLocalStorage)
+    var addedToCart = JSON.parse(localStorage.getItem("itemsInCart"))
     var phone = item;
     addedToCart.push(phone)
     localStorage.setItem("itemsInCart", JSON.stringify(addedToCart));
