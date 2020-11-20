@@ -80,8 +80,8 @@ function renderMerchCart(merch) {
     merchTitle.style.fontWeight = "1000"
     merchTitle.innerText = merch.title
 
-    let merchPrice = document.createElement("h4")
-    merchPrice.style.fontWeight = "550"
+    let merchPrice = document.createElement("h6")
+    // merchPrice.style.fontWeight = "550"
     merchPrice.innerText = merch.price
     
     inCart.appendChild(merchContainer) 
