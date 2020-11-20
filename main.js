@@ -99,6 +99,6 @@ function addItemToLocalStorage(item){
     var phone = item;
     addedToCart.push(phone)
     localStorage.setItem("itemsInCart", JSON.stringify(addedToCart));
-    document.getElementById("counter").innerText = addedToCart.length
+    document.getElementById("count").innerText = addedToCart.length
 
 }
