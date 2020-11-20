@@ -1,5 +1,6 @@
 # TechStore - Team 4
 
+https://github.com/Shahfarzane/TechStore
 
 # TechStore  is a school group project made with HTML, JavaScript and CSS.
 Users can register on the platform and add latest mobile phones to their shopping cart with help of Local storage.
