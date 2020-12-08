@@ -103,3 +103,4 @@ function addItemToLocalStorage(item){
     document.getElementById("count").innerText = addedToCart.length
 }
 
+
