@@ -5,33 +5,32 @@ if(merchList !=null){
 else {
 
 }
-let sumMerch = 0;
-
 for (let i = 0; i <merchList.length; i++)
 {
     const merch = merchList[i]
     renderMerchCart(merch)
-    sumMerch = merch.price + sumMerch
 }
+
     function renderMerchCart(merch)
     {
         
         let inCart = document.getElementById("inCart")
-/* "main container AKA hela kortet för varan"*/        
         let merchContainer = document.createElement("div")
+
         merchContainer.className = "merchCard"
-/* varans bildcontainer */
-        let imgContainer = document.createElement("div")
-        imgContainer.style.flex = "3 0 0px"
-/* textrutans-styling och textcontainer*/
-        let textContainer = document.createElement("div")
-        textContainer.className ="txtCard"
-/* ta bort knapp och styling */
-        let button = document.createElement("button")
-        button.className ="removeBtn"
-        button.innerHTML = '<i class="far fa-trash-alt">&emsp; Ta bort</i>'
-/* ta bort varor från kundvagnen */
-        button.addEventListener
+        // let imgContainer = document.createElement("div")
+        // imgContainer.style.flex = "3 0 0px"
+        let textContainer = document.createElement("h2")
+        // textContainer.style.display = "flex"
+        // textContainer.style.flexDirection = "column"
+        // textContainer.style.flex = "1 0 0px"
+        // textContainer.style.justifyContent = "center"
+        // textContainer.style.alignItems = "center"
+        let deleteButton = document.createElement("button")
+        deleteButton.className = "deleteButton btn-danger"
+
+        deleteButton.innerHTML = '<i class="far fa-trash-alt">&emsp; Ta bort</i>'
+        deleteButton.addEventListener
         ("click", 
             function(item) 
             {
@@ -45,32 +44,30 @@ for (let i = 0; i <merchList.length; i++)
                 window.location.reload()
             }
         ) 
-/* styling och import av varans bild */        
+
+
         let merchImg = document.createElement("img")
         merchImg.src = "./assets/" + merch.image
-        merchImg.className ="merchImage"
+        merchImg.style.height = "250px"
+        merchImg.style.objectFit = "cover"
       
-/* styling för titeln av varan */
-        let merchTitle = document.createElement("h3")
+        let merchTitle = document.createElement("h2")
         merchTitle.style.fontWeight = "550"
         merchTitle.innerText = merch.title
-/* styling för priset av varan */
         let merchPrice = document.createElement("h4")
         merchPrice.style.fontWeight = "50"
         merchPrice.innerText = merch.price
-/* postitionering av divar */ 
         inCart.appendChild(merchContainer) 
 
         merchContainer.appendChild(imgContainer)
         merchContainer.appendChild(textContainer)
 
-        imgContainer.appendChild(merchImg)
+        textContainer.appendChild(merchImg)
 
         textContainer.appendChild(merchTitle)
         textContainer.appendChild(merchPrice)
-        textContainer.appendChild(button)
+        textContainer.appendChild(deleteButton)
     }
-/* Tömma kundvagnen med hjälp av tömma knappen*/
 var blueCartbtn = document.getElementById("blueCartbtn");
 blueCartbtn.addEventListener
 ("click",
@@ -81,4 +78,3 @@ blueCartbtn.addEventListener
         location.reload();
     }
 );
-document.getElementById("cartSum").innerHTML = sumMerch;

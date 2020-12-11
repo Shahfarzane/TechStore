@@ -1,4 +1,4 @@
-var userInLocalStorage = localStorage.getItem("loggedInUser")
+// var userInLocalStorage = localStorage.getItem("loggedInUser")
 
 function initSite() {
 
@@ -14,7 +14,7 @@ function dashboardLoader() {
   var orderText = document.createElement("h4")
   var container = document.getElementById("container")
 
-  var getUser = JSON.parse(userInLocalStorage)
+  var getUser = JSON.parse(localStorage.getItem("loggedInUser"))
   welcomeText.className = "badge badge-primary text-wrap navbar-text"
   orderText.className = "orderText"
 
@@ -23,17 +23,17 @@ function dashboardLoader() {
   orderText.innerText = " ORDERS"
 
 
-  var loggedInUser = JSON.parse(userInLocalStorage)
-  loggedInUser = JSON.parse(userInLocalStorage)
-  allPastOrders = loggedInUser.items
+  var loggedInUser=JSON.parse(localStorage.getItem("loggedInUser"))
+  loggedInUser=JSON.parse(localStorage.getItem('loggedInUser'))
+  orders= loggedInUser.items
 
   var orderDiv = document.createElement("div")
-  for (var j = 0; j < allPastOrders.length; j++) {
+  for (var j = 0; j < orders.length; j++) {
     var cardBody = document.createElement("div")
     cardBody.className = "card border-secondary mb-3 border-success"
 
-    for (var i = 0; i < allPastOrders[j].length; i++) {
-      var item = allPastOrders[j][i]
+    for (var i = 0; i < orders[j].length; i++) {
+      var item = orders[j][i]
 
       var cardTitle = document.createElement("h6")
       var cardText = document.createElement("p")
@@ -78,7 +78,7 @@ function navBarCreator() {
   var navbarItem = document.createElement("li")
   var navBarLink = document.createElement("a")
 
-  var getUser = JSON.parse(userInLocalStorage)
+  var getUser = JSON.parse(localStorage.getItem("loggedInUser"))
 
   userNameSpan.style.margin = "10px"
 
@@ -94,7 +94,7 @@ function navBarCreator() {
   userNameSpan.innerText = " Logged in as: " + getUser.username
 
   var logOutButton = document.createElement("button")
-  if (userInLocalStorage) {
+  if (localStorage.getItem("loggedInUser")) {
     logOutButton.className = 'fas fa-sign-out-alt btn-danger'
   }
 
