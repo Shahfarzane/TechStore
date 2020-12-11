@@ -152,8 +152,7 @@ body{
         font-weight: 1000;
         font-size: 30px;
     }
-    .merchCard 
-    {
+    .merchCard{
         display: flex;
         flex-direction: column;
         position: relative;
@@ -173,8 +172,7 @@ body{
         object-fit: contain;
 
     }
-    .removeBtn
-    {
+    .removeBtn{
         display: flex;
         flex-direction: row;
         border: none;
@@ -190,16 +188,19 @@ body{
         align-items: center;
     
     }
-    #txtTotal
-    {
+    #txtTotal{
         padding: 0;
         margin-top: 40px;
         font-size: 20px;
     }
-    #cartSum
-    {
+    #cartSum{
         padding: 0;
         margin-top: 40px;
         font-size: 20px;
+    }
+    h3{
+        margin: 0px;
+        padding: 5px;
+        font-size: 1.1rem;
     }
 }
