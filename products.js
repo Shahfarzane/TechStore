@@ -51,7 +51,7 @@ for (let i = 0; i <merchList.length; i++)
         merchImg.className ="merchImage"
       
 /* styling för titeln av varan */
-        let merchTitle = document.createElement("h2")
+        let merchTitle = document.createElement("h3")
         merchTitle.style.fontWeight = "550"
         merchTitle.innerText = merch.title
 /* styling för priset av varan */

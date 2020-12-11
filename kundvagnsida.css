@@ -142,9 +142,9 @@ body{
     
 }@media screen and (max-width: 450px)
 {
-    blkCartImg{
-        height: 0px;
-        margin: 0px;
+    .blkCartImg{
+        height: 30px;
+        margin: 10px;
     }
     .blkCartTxt{
         padding: 0px;
@@ -152,8 +152,7 @@ body{
         font-weight: 1000;
         font-size: 30px;
     }
-    .merchCard 
-    {
+    .merchCard{
         display: flex;
         flex-direction: column;
         position: relative;
@@ -161,9 +160,9 @@ body{
         border-radius: 20px;
         padding: 10px;
         background-color: #f5f5f5;
-        max-width: 160px;
+        max-width: 145px;
         height: auto ;
-        margin: 10px;
+        margin: 5px;
         align-items: center;
         justify-content: space-around;
         overflow: hidden;
@@ -173,8 +172,7 @@ body{
         object-fit: contain;
 
     }
-    .removeBtn
-    {
+    .removeBtn{
         display: flex;
         flex-direction: row;
         border: none;
@@ -190,16 +188,19 @@ body{
         align-items: center;
     
     }
-    #txtTotal
-    {
+    #txtTotal{
         padding: 0;
         margin-top: 40px;
         font-size: 20px;
     }
-    #cartSum
-    {
+    #cartSum{
         padding: 0;
         margin-top: 40px;
         font-size: 20px;
+    }
+    h3{
+        margin: 0px;
+        padding: 5px;
+        font-size: 1.1rem;
     }
 }
