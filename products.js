@@ -48,8 +48,7 @@ for (let i = 0; i <merchList.length; i++)
 /* styling och import av varans bild */        
         let merchImg = document.createElement("img")
         merchImg.src = "./assets/" + merch.image
-        merchImg.style.height = "250px"
-        merchImg.style.objectFit = "cover"
+        merchImg.className ="merchImage"
       
 /* styling för titeln av varan */
         let merchTitle = document.createElement("h2")
